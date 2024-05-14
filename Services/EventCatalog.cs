@@ -56,14 +56,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
             }
         }
 
-        public void UpdateEvent(Event event)
-        {
-            if (evt != null)
-            {
-                events[event.Id] = event; 
-            }
-            
-        }
+    
 
 
     }
