@@ -10,5 +10,28 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+        public Dictionary<int, Event> AllEvents()
+        {
+            return events;
+        }
+
+
+
+
+
+
+
     }
 }
