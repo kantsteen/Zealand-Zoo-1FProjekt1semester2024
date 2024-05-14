@@ -40,10 +40,10 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
 
         public Event ReadEvent(int Id)
         {
-            foreach(var read in events)
+            foreach(var e in events)
             {
-                if (read.Key == Id)
-                    return read.Value;
+                if (e.Key == Id)
+                    return e.Value;
             }
             return new Event();
         }
