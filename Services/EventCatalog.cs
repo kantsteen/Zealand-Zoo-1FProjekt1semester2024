@@ -38,11 +38,11 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
             return events;
         }
 
-        public void UpdateEvent(Event event)
+        public void UpdateEvent(Event event) 
         {
             if (event != null)
             {
-                events[event.Id] = event; 
+                events[event.Id] = private event; 
             }
 
         }

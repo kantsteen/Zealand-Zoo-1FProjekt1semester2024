@@ -1,17 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Zealand_Zoo_1FProjekt1semester2024.Models;
 
 namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
-    public class UpdateEventModel : PageModel
+    public class UpdateEventModel(Interface.IEventRepository repository) : PageModel
     {
         [BindProperty]
         public Event Event { get; set; }
-        private IEventRepository catalog;
-        public UpdateEventModel(IEventRepository repository)
-        {
-            catalog = repository;
-        }
+        private Interface.IEventRepository catalog = repository;
+
         public void OnGet(int id)
         {
             Event = catalog.GetEvent(id);
