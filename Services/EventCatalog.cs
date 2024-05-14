@@ -15,30 +15,19 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public Dictionary<int, Event> AllEvents()
         {
             return events;
         }
 
+        public void UpdateEvent(Event event)
+        {
+            if (event != null)
+            {
+                events[event.Id] = event; 
+            }
 
-
-
-
-
-
+        }
     }
 }
+
