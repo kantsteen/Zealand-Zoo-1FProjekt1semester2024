@@ -6,11 +6,11 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Interface
     {
         Dictionary<int, Event> AllEvents();
 
-        void DeleteEvent(Event event);
+        void DeleteEvent(Event evt);
 
-        void AddEvent(Event event);
+        void AddEvent(Event evt);
 
-        void UpdateEvent(Event event);
+        void UpdateEvent(Event evt);
 
         public Event GetEvent(int id);
 
