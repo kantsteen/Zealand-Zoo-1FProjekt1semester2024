@@ -7,4 +7,8 @@
     <RootNamespace>Zealand_Zoo_1FProjekt1semester2024</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
 </Project>
