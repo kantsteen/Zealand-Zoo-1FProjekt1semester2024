@@ -56,6 +56,13 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
             }
         }
 
+        public void DeleteEvents(Event evt) 
+        {
+            if(evt != null)
+            {
+                events.Remove(evt.Id);
+            }
+        }
     
 
 
