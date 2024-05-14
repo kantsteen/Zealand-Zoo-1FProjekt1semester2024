@@ -11,11 +11,11 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
         public EventCatalog()
         {
             events = new Dictionary<int, Event>();
-            events.Add(1, new Event() { Id = 1, Name = "Fredagsbar", Description = "Dødsdruk", Limit = 50, OpeningHours = new TimeSpan(2,30,10), ImageName = "Fredagsbar.jfif" });
-            events.Add(2, new Event() { Id = 2, Name = "Nat Bowling", Description = "yay", Limit = 25, OpeningHours = new TimeSpan(3, 0, 0), ImageName = "Bowling.jfif" });
-            events.Add(3, new Event() { Id = 3, Name = "Festival", Description = "Sommer hygge", Limit = 250, OpeningHours = new TimeSpan(7, 30, 0), ImageName = "Festival.jfif" });
-            events.Add(4, new Event() { Id = 4, Name = "Champions league finale", Description = "Vi skal se fodbold", Limit = 100, OpeningHours = new TimeSpan(2, 0, 0), ImageName = "Fodbold.jfif" });
-            events.Add(5, new Event() { Id = 5, Name = "Brætspil aften", Description = "Ludooooo", Limit = 30, OpeningHours = new TimeSpan(4, 0, 0), ImageName = "Brætspil.jfif" });
+            events.Add(1, new Event() { Id = 1, Name = "Fredagsbar", Description = "Dødsdruk", Limit = 50, OpeningTime = new DateTime(2024, 5, 14, 14, 0, 0), ClosingTime = new DateTime(2024, 5, 14, 17, 0, 0), ImageName = "Fredagsbar.jfif" });
+            events.Add(2, new Event() { Id = 2, Name = "Nat Bowling", Description = "yay", Limit = 25, OpeningTime = new DateTime(2024, 5, 15, 22, 0, 0), ClosingTime = new DateTime(2024, 5, 15, 01, 0, 0), ImageName = "Bowling.jfif" });
+            events.Add(3, new Event() { Id = 3, Name = "Festival", Description = "Sommer hygge", Limit = 250, OpeningTime = new DateTime(2024, 5, 16, 14, 0, 0), ClosingTime = new DateTime(2024, 5, 16, 22, 0, 0), ImageName = "Festival.jfif" });
+            events.Add(4, new Event() { Id = 4, Name = "Champions league finale", Description = "Vi skal se fodbold", Limit = 100, OpeningTime = new DateTime(2024, 5, 17, 19, 0, 0), ClosingTime = new DateTime(2024, 5, 17, 21, 0, 0), ImageName = "Fodbold.jfif" });
+            events.Add(5, new Event() { Id = 5, Name = "Brætspil aften", Description = "Ludooooo", Limit = 30, OpeningTime = new DateTime(2024, 5, 18, 16, 0, 0), ClosingTime = new DateTime(2024, 5, 18, 20, 0, 0), ImageName = "Brætspil.jfif" });
         }
 
 
@@ -24,10 +24,22 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
 
 
 
+<<<<<<< HEAD
+=======
 
 
 
+public Dictionary<int, Event> AllEvents()
+        {
+            return events;
+        }
 
+
+        public void AddEvent(Event newEvent)
+        {
+            if (!events.Keys.Contains(newEvent.Id))
+                events.Add(newEvent.Id, newEvent);
+        }
 
 
 
@@ -43,12 +55,18 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
         
         
         
-        public Dictionary<int, Event> AllEvents()
-        {
-            return events;
-        }
+        
 
+
+
+
+
+        
+
+        public void UpdateEvent(Event event)
+=======
         public void UpdateEvent(Event evt)
+>>>>>>> 16f12653129dad210004deb824aba964b3d73d4d
         {
             if (evt != null)
             {
