@@ -27,9 +27,15 @@
         <span asp-validation-for="@Model.Event.Limit" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Event.OpeningHours" class="control-label"></label>
-        <input asp-for="@Model.Event.OpeningHours" class="form-control" />
-        <span asp-validation-for="@Model.Event.OpeningHours" class="text-danger"></span>
+        <label asp-for="@Model.Event.OpeningTime" class="control-label"></label>
+        <input asp-for="@Model.Event.OpeningTime" class="form-control" />
+        <span asp-validation-for="@Model.Event.OpeningTime" class="text-danger"></span>
+    </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Event.ClosingTime" class="control-label"></label>
+        <input asp-for="@Model.Event.ClosingTime" class="form-control" />
+        <span asp-validation-for="@Model.Event.ClosingTime" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="@Model.Event.ImageName" class="control-label"></label>
