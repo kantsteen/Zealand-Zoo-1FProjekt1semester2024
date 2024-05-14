@@ -1,3 +1,5 @@
+using Zealand_Zoo_1FProjekt1semester2024.Services;
+
 namespace Zealand_Zoo_1FProjekt1semester2024
 {
     public class Program
@@ -8,7 +10,8 @@ namespace Zealand_Zoo_1FProjekt1semester2024
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-
+            //services.AddSingleton<IPizzaRepository, PizzaCatalog>();
+            builder.Services.AddTransient<IEventRepository, EventJSON>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
