@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Zealand_Zoo_1FProjekt1semester2024.Interface;
+using Zealand_Zoo_1FProjekt1semester2024.Models;
 
 namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
@@ -8,17 +10,14 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
         [BindProperty]
         public Event Event { get; set; }
         private IEventRepository catalog;
-        public UpdateEventModel(IEventRepository repository)
-        {
+        public UpdateEventModel(IEventRepository repository) {
             catalog = repository;
         }
-        public void OnGet(int id)
-        {
+        public void OnGet(int id) {
             Event = catalog.GetEvent(id);
         }
 
-        public IActionResult OnPost()
-        {
+        public IActionResult OnPost() {
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -26,4 +25,5 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
             catalog.UpdateEvent(Event);
             return RedirectToPage("ReadEvent");
         }
+    }
 }
