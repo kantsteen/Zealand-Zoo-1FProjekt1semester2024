@@ -30,7 +30,10 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
 
 
 
-
+        public Event GetEvent(int id)
+        {
+            return events[id];
+        }
 
 
     }
