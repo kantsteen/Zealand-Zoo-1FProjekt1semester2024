@@ -8,9 +8,9 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
     public class ReadEventModel : PageModel
     {
         private IEventRepository catalog;
-        public ReadEventModel(IEventRepository Event)
+        public ReadEventModel(IEventRepository evt)
         {
-            catalog = Event;
+            catalog = evt;
         }
         public Dictionary<int, Event> Events { get; private set; }
 
