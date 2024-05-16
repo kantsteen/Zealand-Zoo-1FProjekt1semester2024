@@ -3,6 +3,8 @@ using Zealand_Zoo_1FProjekt1semester2024.Helpers;
 using Zealand_Zoo_1FProjekt1semester2024.Interface;
 using Zealand_Zoo_1FProjekt1semester2024.Models;
 using Newtonsoft.Json;
+using Zealand_Zoo_1FProjekt1semester2024.Models;
+using Microsoft.AspNetCore.Hosting;
 
 
 
@@ -10,7 +12,19 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
 {
     public class EventJSON : IEventRepository
     {
-        string JsonFileName = @"C:\Users\Daniyal\source\repos\Zealand-Zoo-1FProjekt1semester2024\Data\JSONEvents.json";
+        public EventJSON(IWebHostEnvironment webHostEnvironment) {
+            WebHostEnvironment = webHostEnvironment;
+        }
+
+        public IWebHostEnvironment WebHostEnvironment { get; }
+
+        private string JsonFileName
+        {
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "JSONEvents.json"); }
+        }
+
+
+        //string JsonFileName = @"C:\Users\Daniyal\source\repos\Zealand-Zoo-1FProjekt1semester2024\Data\JSON Events.json";
 
 
         public void AddEvent(Event newEvent)
