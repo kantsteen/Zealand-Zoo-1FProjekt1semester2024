@@ -40,6 +40,8 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
 
         public Event ReadEvent(int Id)
         {
+            Dictionary<int, Event> events = AllEvents();
+
             foreach (var e in events)
             {
                 if (e.Key == Id)
@@ -50,6 +52,8 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
 
         public void UpdateEvent(Event evt)
         {
+            Dictionary<int, Event> events = AllEvents();
+
             if (evt != null)
             {
                 events[evt.Id] = evt;
@@ -58,6 +62,8 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
 
         public void DeleteEvent(Event evt)
         {
+            Dictionary<int, Event> events = AllEvents();
+
             if (evt != null)
             {
                 events.Remove(evt.Id);
