@@ -4,8 +4,8 @@
     "Name": "Fredagsbar",
     "Description": "Dødsdruk",
     "Limit": 50,
-    "OpeningTime": "14/05/2024 kl.14.00",
-    "ClosingTime":  "14/05/2024 kl.17.00",
+    "OpeningTime": "2024-05-14T14:00:00",
+    "ClosingTime": "2024-05-14T17:00:00",
     "ImageName": "Fredagsbar.jfif"
   },
   "2": {
@@ -13,8 +13,8 @@
     "Name": "Nat Bowling",
     "Description": "yay",
     "Limit": 25,
-    "OpeningTime": "15/05/2024 kl.22.00",
-    "ClosingTime": "16/05/2024 kl.01.00",
+    "OpeningTime": "2024-05-15T22:00:00",
+    "ClosingTime": "2024-05-16T01:00:00",
     "ImageName": "Bowling.jfif"
   },
   "3": {
@@ -22,8 +22,8 @@
     "Name": "Festival",
     "Description": "Sommer hygge",
     "Limit": 250,
-    "OpeningTime": "16/05/2024 kl.14.00",
-    "ClosingTime": "16/05/2024 kl.22.00",
+    "OpeningTime": "2024-05-16T14:00:00",
+    "ClosingTime": "2024-05-16T22:00:00",
     "ImageName": "Festival.jfif"
   },
   "4": {
@@ -31,8 +31,8 @@
     "Name": "Champions league finale",
     "Description": "Vi skal se fodbold",
     "Limit": 100,
-    "OpeningTime": "17/05/2024 kl.19.00",
-    "ClosingTime": "17/05/2024 kl.21.00",
+    "OpeningTime": "2024-05-17T19:00:00",
+    "ClosingTime": "2024-05-17T21:00:00",
     "ImageName": "Fodbold.jfif"
   },
   "5": {
@@ -40,8 +40,8 @@
     "Name": "Brætspil aften",
     "Description": "Ludooooo",
     "Limit": 30,
-    "OpeningTime": "18/05/2024 kl.16.00",
-    "ClosingTime": "18/05/2024 kl.20.00",
+    "OpeningTime": "2024-05-18T16:00:00",
+    "ClosingTime": "2024-05-18T20:00:00",
     "ImageName": "Brætspil.jfif"
   }
 
