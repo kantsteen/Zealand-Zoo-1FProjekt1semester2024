@@ -10,7 +10,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            //services.AddSingleton<IPizzaRepository, PizzaCatalog>();
+            //services.AddSingleton<IEventRepository, EventCatalog>();
             builder.Services.AddTransient<IEventRepository, EventJSON>();
             var app = builder.Build();
 

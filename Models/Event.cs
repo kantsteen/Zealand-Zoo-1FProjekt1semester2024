@@ -11,9 +11,9 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Models
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Maks antal nødvendig")]
-        [Range(typeof(decimal), "1", "250",
+        [Range(typeof(int), "1", "250",
         ErrorMessage = "Værdi mellem 1 & 250 ")]
-        public decimal Limit { get; set; }
+        public int Limit { get; set; }
 
         public DateTime OpeningTime { get; set; }
 
