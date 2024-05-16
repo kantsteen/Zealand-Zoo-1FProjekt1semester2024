@@ -11,58 +11,58 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
     public class EventJSON : IEventRepository
     {
         string JsonFileName = @"C:\Users\Daniyal\source\repos\Zealand-Zoo-1FProjekt1semester2024\Data\JSON Events.json";
-    }
 
-    public void AddEvent(Event newEvent)
-    {
-        Dictionary<int, Event > events = AllEvents();
-        events.Add(newEvent.Id, newEvent);
-        JSONFileWriter.WriteToJson(events, JsonFileName);
-    }
 
-    public Dictionary<int, Event> AllEvents()
-    {
-        return JSONFileReader.ReadJson(JsonFileName);
-    }
-
-    public Dictionary<int, Event> FilterEvent(string criteria)
-    {
-        Dictionary<int, Event> events = AllEvents();
-        Dictionary<int, Event> filteredEvents = new Dictionary<int, Event>();
-        foreach (var e in events.Values)
+        public void AddEvent(Event newEvent)
         {
-            if (e.Name.StartsWith(criteria))
+            Dictionary<int, Event> events = AllEvents();
+            events.Add(newEvent.Id, newEvent);
+            JSONFileWriter.WriteToJson(events, JsonFileName);
+        }
+
+        public Dictionary<int, Event> AllEvents()
+        {
+            return JSONFileReader.ReadJson(JsonFileName);
+        }
+
+        public Dictionary<int, Event> FilterEvent(string criteria)
+        {
+            Dictionary<int, Event> events = AllEvents();
+            Dictionary<int, Event> filteredEvents = new Dictionary<int, Event>();
+            foreach (var e in events.Values)
             {
-                filteredEvents.Add(e.Id, e);
+                if (e.Name.StartsWith(criteria))
+                {
+                    filteredEvents.Add(e.Id, e);
+                }
+            }
+            return filteredEvents;
+        }
+
+        public Event ReadEvent(int Id)
+        {
+            foreach (var e in events)
+            {
+                if (e.Key == Id)
+                    return e.Value;
+            }
+            return new Event();
+        }
+
+        public void UpdateEvent(Event evt)
+        {
+            if (evt != null)
+            {
+                events[evt.Id] = evt;
             }
         }
-        return filteredEvents;
-    }
 
-    public Event ReadEvent(int Id)
-    {
-        foreach (var e in events)
+        public void DeleteEvent(Event evt)
         {
-            if (e.Key == Id)
-                return e.Value;
-        }
-        return new Event();
-    }
-
-    public void UpdateEvent(Event evt)
-    {
-        if (evt != null)
-        {
-            events[evt.Id] = evt;
+            if (evt != null)
+            {
+                events.Remove(evt.Id);
+            }
         }
     }
-
-    public void DeleteEvent(Event evt)
-    {
-        if (evt != null)
-        {
-            events.Remove(evt.Id);
-        }
-    }
-
 }
