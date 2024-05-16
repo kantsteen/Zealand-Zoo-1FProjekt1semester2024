@@ -43,7 +43,14 @@
     "OpeningTime": "2024-05-18T16:00:00",
     "ClosingTime": "2024-05-18T20:00:00",
     "ImageName": "Brætspil.jfif"
+  },
+  "7": {
+    "Id": 7,
+    "Name": "Galde",
+    "Description": "Yesyes",
+    "Limit": 7,
+    "OpeningTime": "2024-05-17T13:53:00",
+    "ClosingTime": "2024-05-25T13:53:00",
+    "ImageName": "bob"
   }
-
-
 }
