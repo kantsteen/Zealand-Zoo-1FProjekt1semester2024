@@ -10,7 +10,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
 {
     public class EventJSON : IEventRepository
     {
-        string JsonFileName = @"C:\Users\Daniyal\source\repos\Zealand-Zoo-1FProjekt1semester2024\Data\JSON Events.json";
+        string JsonFileName = @"C:\Users\Daniyal\source\repos\Zealand-Zoo-1FProjekt1semester2024\Data\JSONEvents.json";
 
 
         public void AddEvent(Event newEvent)
