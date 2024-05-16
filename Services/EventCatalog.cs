@@ -37,6 +37,22 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
                 events.Add(newEvent.Id, newEvent);
         }
 
+        public Dictionary<int, Event> FilterEvent(string criteria)
+        {
+            Dictionary<int, Event> myEvents = new Dictionary<int, Event>();
+            if (criteria != null)
+            {
+                foreach (var e in events.Values)
+                {
+                    if (e.Name.StartsWith(criteria))
+                    {
+                        myEvents.Add(e.Id, e);
+                    }
+                }
+            }
+            return myEvents;
+        }
+
 
         public Event ReadEvent(int Id)
         {
