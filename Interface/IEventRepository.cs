@@ -14,7 +14,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Interface
 
         void UpdateEvent(Event evt);
 
-        public Event GetEvent(int id);
+        public Event ReadEvent(int id);
 
     }
 }
