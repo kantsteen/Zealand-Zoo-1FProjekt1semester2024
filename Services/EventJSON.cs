@@ -2,6 +2,7 @@
 using Zealand_Zoo_1FProjekt1semester2024.Helpers;
 using Zealand_Zoo_1FProjekt1semester2024.Interface;
 using Zealand_Zoo_1FProjekt1semester2024.Models;
+using Newtonsoft.Json;
 
 
 
