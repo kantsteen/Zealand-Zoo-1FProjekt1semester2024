@@ -1,3 +1,4 @@
+using Zealand_Zoo_1FProjekt1semester2024.Interface;
 using Zealand_Zoo_1FProjekt1semester2024.Services;
 
 namespace Zealand_Zoo_1FProjekt1semester2024
