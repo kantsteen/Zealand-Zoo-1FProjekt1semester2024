@@ -75,7 +75,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
             }
         }
 
-        public void DeleteEvents(Event evt) 
+        public void DeleteEvent(Event evt) 
         {
             if(evt != null)
             {
