@@ -14,7 +14,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
             catalog = repository;
         }
         public void OnGet(int id) {
-            Event = catalog.GetEvent(id);
+            Event = catalog.ReadEvent(id);
         }
 
         public IActionResult OnPost() {
