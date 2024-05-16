@@ -1,4 +1,6 @@
-﻿namespace Zealand_Zoo_1FProjekt1semester2024.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Zealand_Zoo_1FProjekt1semester2024.Models
 {
     public class Event
     {
@@ -8,7 +10,10 @@
 
         public string Description { get; set; }
 
-        public int Limit { get; set; }
+        [Required(ErrorMessage = "Maks antal nødvendig")]
+        [Range(typeof(decimal), "1", "250",
+        ErrorMessage = "Værdi mellem 1 & 250 ")]
+        public decimal Limit { get; set; }
 
         public DateTime OpeningTime { get; set; }
 
