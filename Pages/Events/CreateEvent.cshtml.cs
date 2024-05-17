@@ -29,7 +29,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 
             catalog.AddEvent(Event);
 
-            return RedirectToPage("ReadAllEvents");
+            return RedirectToPage("ReadAllEvent");
         }
     }
 }
