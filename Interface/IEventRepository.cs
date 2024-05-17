@@ -8,7 +8,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Interface
 
         Dictionary<int, Event> FilterEvent(string crtiteria);
 
-        void DeleteEvent(Event evt);
+        void DeleteEvent(int id);
 
         void AddEvent(Event evt);
 
