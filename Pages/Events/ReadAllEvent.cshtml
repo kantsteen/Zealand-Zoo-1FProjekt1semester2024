@@ -1,0 +1,85 @@
+﻿@page
+@model Zealand_Zoo_1FProjekt1semester2024.Pages.Events.ReadEventModel
+@{
+    ViewData["Title"] = "ReadAllEvent";
+
+}
+<h1>ShowAllEvents</h1>
+
+<p>
+    <a asp-page="CreateEvent">Create New Event</a>
+</p>
+
+<form>
+    <p>
+        Search: <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Limit
+            </th>
+            <th>
+                OpeningTime
+            </th>
+            <th>
+                ClosingTime
+            </th>
+            <th>
+                ImageName
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Events)
+        {
+            <tr>
+                <td>
+                    @item.Value.Id
+                </td>
+                <td>
+                    @item.Value.Name
+                </td>
+                <td>
+                    @item.Value.Description
+                </td>
+                <td>
+                    @item.Value.Limit
+                </td>
+                <td>
+                    @item.Value.OpeningTime
+                </td>
+                <td>
+                    @item.Value.ClosingTime
+                </td>
+                <td>
+                    @item.Value.ImageName
+                </td>
+                <td>
+                    <img src="~/Images/@item.Value.ImageName" width="60" height="70">
+                </td>
+                <td>
+                    <p>
+                        <a asp-page="UpdateEvent" asp-route-id="@item.Key">Edit</a> |
+                        <a asp-page="DeleteEvent" asp-route-id="@item.Key">Delete</a>
+                    </p>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

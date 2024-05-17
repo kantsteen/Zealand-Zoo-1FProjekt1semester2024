@@ -6,13 +6,15 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Interface
     {
         Dictionary<int, Event> AllEvents();
 
-        void DeleteEvent(Event event);
+        Dictionary<int, Event> FilterEvent(string crtiteria);
 
-        void AddEvent(Event event);
+        void DeleteEvent(Event evt);
 
-        void UpdateEvent(Event event);
+        void AddEvent(Event evt);
 
-        Event GetEvent(int id);
+        void UpdateEvent(Event evt);
+
+        public Event ReadEvent(int id);
 
     }
 }

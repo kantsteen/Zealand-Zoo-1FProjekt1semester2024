@@ -1,0 +1,47 @@
+{
+  "1": {
+    "Id": 1,
+    "Name": "Fredagsbar",
+    "Description": "Dødsdruk",
+    "Limit": 50,
+    "OpeningTime": "2024-05-14T14:00:00",
+    "ClosingTime": "2024-05-14T17:00:00",
+    "ImageName": "Fredagsbar.jfif"
+  },
+  "2": {
+    "Id": 2,
+    "Name": "Nat Bowling",
+    "Description": "yay",
+    "Limit": 25,
+    "OpeningTime": "2024-05-15T22:00:00",
+    "ClosingTime": "2024-05-16T01:00:00",
+    "ImageName": "bowling.jfif"
+  },
+  "3": {
+    "Id": 3,
+    "Name": "Festival",
+    "Description": "Sommer hygge",
+    "Limit": 250,
+    "OpeningTime": "2024-05-16T14:00:00",
+    "ClosingTime": "2024-05-16T22:00:00",
+    "ImageName": "Festival.jfif"
+  },
+  "4": {
+    "Id": 4,
+    "Name": "Champions league finale",
+    "Description": "Vi skal se fodbold",
+    "Limit": 100,
+    "OpeningTime": "2024-05-17T19:00:00",
+    "ClosingTime": "2024-05-17T21:00:00",
+    "ImageName": "Fodbold.jfif"
+  },
+  "5": {
+    "Id": 5,
+    "Name": "Brætspil aften",
+    "Description": "Ludoooo",
+    "Limit": 30,
+    "OpeningTime": "2024-05-17T09:46:00",
+    "ClosingTime": "2024-05-24T10:47:00",
+    "ImageName": "Brætspil.jfif"
+  }
+}
