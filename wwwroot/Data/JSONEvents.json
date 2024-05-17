@@ -38,10 +38,10 @@
   "5": {
     "Id": 5,
     "Name": "Brætspil aften",
-    "Description": "Ludooooo",
+    "Description": "Ludoooo",
     "Limit": 30,
-    "OpeningTime": "2024-05-18T16:00:00",
-    "ClosingTime": "2024-05-18T20:00:00",
+    "OpeningTime": "2024-05-17T09:46:00",
+    "ClosingTime": "2024-05-24T10:47:00",
     "ImageName": "Brætspil.jfif"
   }
 }
