@@ -15,8 +15,10 @@
     "Limit": 25,
     "OpeningTime": "2024-05-15T22:00:00",
     "ClosingTime": "2024-05-16T01:00:00",
-    "ImageName": "Bowling.jfif"
+    "ImageName": "bowling.jfif"
   },
+
+
   "3": {
     "Id": 3,
     "Name": "Festival",
@@ -26,6 +28,8 @@
     "ClosingTime": "2024-05-16T22:00:00",
     "ImageName": "Festival.jfif"
   },
+
+
   "4": {
     "Id": 4,
     "Name": "Champions league finale",
@@ -35,6 +39,7 @@
     "ClosingTime": "2024-05-17T21:00:00",
     "ImageName": "Fodbold.jfif"
   },
+
   "5": {
     "Id": 5,
     "Name": "Brætspil aften",
@@ -44,6 +49,7 @@
     "ClosingTime": "2024-05-18T20:00:00",
     "ImageName": "Brætspil.jfif"
   },
+
   "7": {
     "Id": 7,
     "Name": "Galde",
@@ -53,6 +59,7 @@
     "ClosingTime": "2024-05-25T13:53:00",
     "ImageName": "bob"
   },
+
   "10": {
     "Id": 10,
     "Name": "Lasse's 21 års fødselsdag",
@@ -62,4 +69,5 @@
     "ClosingTime": "2024-05-19T19:00:00",
     "ImageName": "BING BONG"
   }
+
 }

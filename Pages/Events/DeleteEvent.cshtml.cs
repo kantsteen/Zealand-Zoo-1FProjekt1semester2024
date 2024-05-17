@@ -22,9 +22,9 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
             return Page();
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(int id)
         {
-            catalog.DeleteEvent(Event);
+            catalog.DeleteEvent(id);
             return RedirectToPage("ReadAllEvents");
         }
         
