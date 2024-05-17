@@ -72,6 +72,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
             if (evt != null)
             {
                 events[evt.Id] = evt;
+                JSONFileWriter.WriteToJson(events, JsonFileName);
             }
         }
 
