@@ -25,7 +25,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
         public IActionResult OnPost()
         {
             catalog.DeleteEvent(Event);
-            return RedirectToPage("ReadAllEvents");
+            return RedirectToPage("ReadAllEvent");
         }
         
     }
