@@ -43,14 +43,5 @@
     "OpeningTime": "2024-05-18T16:00:00",
     "ClosingTime": "2024-05-18T20:00:00",
     "ImageName": "Brætspil.jfif"
-  },
-  "8": {
-    "Id": 8,
-    "Name": "gyaaaaaldem",
-    "Description": "maaaaandem",
-    "Limit": 50,
-    "OpeningTime": "2000-02-13T00:00:00",
-    "ClosingTime": "5555-02-15T14:13:00",
-    "ImageName": "gyaaldeeem"
   }
 }
