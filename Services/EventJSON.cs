@@ -75,14 +75,14 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
             }
         }
 
-        public void DeleteEvent(int Id)
+        public void DeleteEvent(Event evt)
         {
            
 
-            if (Id != null)
+            if (evt != null)
             {
                 Dictionary<int, Event> events = AllEvents();
-                events.Remove(Id);
+                events.Remove(evt.Id);
                 JSONFileWriter.WriteToJson(events, JsonFileName);
             }
         }
