@@ -19,7 +19,7 @@
   },
   "3": {
     "Id": 3,
-    "Name": "Festival1",
+    "Name": "Festival",
     "Description": "Sommer hygge",
     "Limit": 250,
     "OpeningTime": "2024-05-16T14:00:00",
