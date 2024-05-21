@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Identity;
 using Zealand_Zoo_1FProjekt1semester2024.Interface;
+using Zealand_Zoo_1FProjekt1semester2024.Models;
 using Zealand_Zoo_1FProjekt1semester2024.Services;
 
 namespace Zealand_Zoo_1FProjekt1semester2024
@@ -13,6 +15,16 @@ namespace Zealand_Zoo_1FProjekt1semester2024
             builder.Services.AddRazorPages();
             //services.AddSingleton<IEventRepository, EventCatalog>();
             builder.Services.AddTransient<IEventRepository, EventJSON>();
+            builder.Services.AddSingleton<User>();
+            //builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            //{
+            //    options.Password.RequireDigit = true;
+            //    options.Password.RequireLowercase = true;
+            //    options.Password.RequireUppercase = true;
+            //    options.Password.RequiredLength = 6;
+            //})
+            //.AddRoles<IdentityRole>()
+            //.AddEntityFrameworkStores<ApplicationDbContext>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
