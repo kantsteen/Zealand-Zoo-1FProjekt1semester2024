@@ -8,18 +8,18 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
     public class ReadEventModel : PageModel
     {
         private IEventRepository catalog;
-        private  User user;
-        public ReadEventModel(IEventRepository evt, User usr)
+        
+        public ReadEventModel(IEventRepository evt)
         {
             catalog = evt;
-            user = usr;
+           
             
         }
         public Dictionary<int, Event> Events { get; private set; }
 
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
-        public bool IsAdmin { get { return user.Admin; } }
+        
 
         public IActionResult OnGet()
         {
