@@ -19,7 +19,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
-        public bool IsAdmin { get { return user.Admin; } }
+      
 
         public IActionResult OnGet()
         {
