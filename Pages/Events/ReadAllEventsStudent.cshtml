@@ -40,6 +40,9 @@
             <th>
                 ImageName
             </th>
+            <th>
+                Action
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -73,7 +76,7 @@
 
                 <td>
                     <p>
-                        <a asp-page="UpdateEvent" asp-route-id="@item.Key">Tilmelding</a>
+                        <a id="btn-@item.Key" asp-page="UpdateEvent" asp-route-id="@item.Key" onclick="changeButtonText(@item.Key)">Tilmelding</a>
                     </p>
                 </td>
                
@@ -82,3 +85,12 @@
     </tbody>
 
 </table>
+
+        {
+    <script type="text/javascript">
+        function changeButtonText(id) {
+            var button = document.getElementById('btn-' + id);
+            button.innerText = 'tilmeldt';
+            button.href = 'javascript:void(0)'; // Disable the link after clicking
+        }
+    </script>

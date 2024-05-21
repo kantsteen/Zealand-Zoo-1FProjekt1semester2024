@@ -17,10 +17,23 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Models
 
         public DateTime OpeningTime { get; set; }
 
-        public DateTime ClosingTime {  get; set; }
+        public DateTime ClosingTime { get; set; }
 
         public string ImageName { get; set; }
 
         
+
+        
+        
     }
 }
+        
+       
+    
+
+    
+       
+    
+
+    
+
