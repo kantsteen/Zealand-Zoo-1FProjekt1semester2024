@@ -70,7 +70,12 @@
                 <td>
                     <img src="~/Images/@item.Value.ImageName" width="60" height="70">
                 </td>
-                
+
+                <td>
+                    <p>
+                        <a asp-page="UpdateEvent" asp-route-id="@item.Key">Tilmelding</a>
+                    </p>
+                </td>
                
             </tr>
         }
