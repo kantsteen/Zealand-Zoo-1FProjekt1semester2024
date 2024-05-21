@@ -60,6 +60,7 @@
                 </td>
                 <td>
                     @item.Value.Limit
+                  
                 </td>
                 <td>
                     @item.Value.OpeningTime
@@ -79,7 +80,6 @@
                         <a id="btn-@item.Key" asp-page="UpdateEvent" asp-route-id="@item.Key" onclick="changeButtonText(@item.Key)">Tilmelding</a>
                     </p>
                 </td>
-               
             </tr>
         }
     </tbody>
