@@ -6,7 +6,7 @@
             get { return _admin; } 
             set { bool _admin; }
             
-}
+} // hej
         public User()
         {
             _admin = false;
