@@ -12,14 +12,14 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
         public ReadAllEventModelStudents(IEventRepository evt)
         {
             catalog = evt;
-            
+        
 
         }
         public Dictionary<int, Event> Events { get; private set; }
 
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
-        
+        public bool IsAdmin { get { return user.Admin; } }
 
         public IActionResult OnGet()
         {
