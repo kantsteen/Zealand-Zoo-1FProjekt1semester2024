@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Pages/Events/ReadAllEvent.cshtml.cs
+/Pages/Events/ReadAllEventsStudent.cshtml
+/Pages/Events/ReadAllEventsStudent.cshtml.cs
+/Models/Event.cs

@@ -15,7 +15,6 @@ namespace Zealand_Zoo_1FProjekt1semester2024
             builder.Services.AddRazorPages();
             //services.AddSingleton<IEventRepository, EventCatalog>();
             builder.Services.AddTransient<IEventRepository, EventJSON>();
-         
             //builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
             //{
             //    options.Password.RequireDigit = true;
@@ -45,6 +44,9 @@ namespace Zealand_Zoo_1FProjekt1semester2024
             app.MapRazorPages();
 
             app.Run();
+            //Hej
         }
-    }
+        
+    } 
+
 }
