@@ -86,12 +86,14 @@
 
 </table>
 
-        {
-    <script type="text/javascript">
-        function changeButtonText(id) {
-            var button = document.getElementById('btn-' + id);
-            button.innerText = 'Tilmeldt';
-            button.href = 'javascript:void(0)'; // Disable the link after clicking
-            alert('Du er nu tilmeldt dette event!.');
-        }
-    </script>
+   {
+<script type="text/javascript">
+    function changeButtonText(id) {
+        var button = document.getElementById('btn-' + id);
+        button.innerText = 'Tilmeldt';
+        alert('Du er nu tilmeldt dette event!');
+        button.style.pointerEvents = 'none'; // Disable click event
+        button.style.color = 'gray'; // Change color to indicate disabled state
+        button.style.textDecoration = 'none'; // Remove underline
+    }
+</script>
