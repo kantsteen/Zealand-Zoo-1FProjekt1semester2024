@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Http;
 
-namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Login
+namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
     public class BasePageModelModel : PageModel
     {
@@ -13,7 +14,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Login
         {
             if (!IsAuthenticated)
             {
-                Response.Redirect("/Login");
+                Response.Redirect("/Events/Login");
             }
         }
     }

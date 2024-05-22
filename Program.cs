@@ -16,6 +16,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024
             //services.AddSingleton<IEventRepository, EventCatalog>();
             builder.Services.AddTransient<IEventRepository, EventJSON>();
             builder.Services.AddSession();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -2,10 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Zealand_Zoo_1FProjekt1semester2024.Interface;
 using Zealand_Zoo_1FProjekt1semester2024.Models;
+using System.Collections.Generic;
 
 namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
-    public class ReadEventModel : PageModel
+    public class ReadEventModel : BasePageModelModel
     {
         private IEventRepository catalog;
         public ReadEventModel(IEventRepository evt)
@@ -20,6 +21,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
         
         public IActionResult OnGet()
         {
+            CheckLogin(); // Ensure the user is authenticated
             Events = catalog.AllEvents();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {

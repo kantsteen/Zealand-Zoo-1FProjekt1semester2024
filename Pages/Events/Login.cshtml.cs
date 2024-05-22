@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Zealand_Zoo_1FProjekt1semester2024.Models;
+using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
-namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Login
+namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
     public class LoginModel : PageModel
     {
@@ -19,7 +20,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Login
 
         private List<Administrator> LoadUsers()
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Administrator.json");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "data", "Administrator.json");
             var jsonData = System.IO.File.ReadAllText(filePath);
             return JsonSerializer.Deserialize<List<Administrator>>(jsonData);
         }
