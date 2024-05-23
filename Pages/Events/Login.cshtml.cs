@@ -10,10 +10,8 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
     public class LoginModel : PageModel
     {
-        public Administrator Administrator { get; set; }
-
         [BindProperty]
-        /*public string Name { get; set; }
+        public string Name { get; set; }
 
         [BindProperty]
         public string Password { get; set; }
@@ -22,7 +20,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 
         private List<Administrator> LoadUsers()
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "data", "Administrator.json");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "data", "Admin.json");
             var jsonData = System.IO.File.ReadAllText(filePath);
             return JsonSerializer.Deserialize<List<Administrator>>(jsonData);
         }
