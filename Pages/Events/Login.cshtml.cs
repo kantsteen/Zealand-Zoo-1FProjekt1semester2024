@@ -10,8 +10,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
     public class LoginModel : PageModel
     {
-        //Vi har mulighed for at benytte vores admin klasse her(ligesom vi gjorde med event)
-        //Dvs. så vi ikke behøver at benytte samme attributer igen og igen
+
         [BindProperty]
         public string Name { get; set; }
 
