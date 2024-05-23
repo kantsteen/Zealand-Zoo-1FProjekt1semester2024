@@ -10,14 +10,15 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
     public class LoginModel : PageModel
     {
+        public Administrator Administrator { get; set; }
 
         [BindProperty]
-        public string Name { get; set; }
+        /*public string Name { get; set; }
 
         [BindProperty]
         public string Password { get; set; }
 
-        public string Message { get; set; }
+        */public string Message { get; set; }
 
         private List<Administrator> LoadUsers()
         {
@@ -31,7 +32,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
         public IActionResult OnPost()
         {
             var users = LoadUsers();
-            var user = users.Find(u => u.Name == Name && u.Password == Password);
+            var user = users.Find(u => u.Name == Administrator.Name && u.Password == Administrator.Password);
             if (user != null)
             {
                 HttpContext.Session.SetString("Name", user.Name);
