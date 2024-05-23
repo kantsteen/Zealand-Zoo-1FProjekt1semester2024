@@ -11,8 +11,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
     public class LoginModel : PageModel
     {
         [BindProperty]
-        public Administrator Administrator { get; set; } // Hentes fra model klassen Administrator
-        
+       public Administrator Administrator { get; set; }
 
         public string Message { get; set; }
 

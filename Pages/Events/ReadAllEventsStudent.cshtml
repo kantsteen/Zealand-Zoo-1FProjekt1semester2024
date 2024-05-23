@@ -77,8 +77,7 @@
 
                 <td>
                     <p>
-                        <a id="btn-@item.Key" href="#" onclick="changeButtonText(@item.Key);">Tilmelding</a>
-
+                        <a id="btn-@item.Key" href="#" onclick="changeButtonText(@item.Key); ">Tilmelding</a>
                     </p>
                 </td>
             </tr>
@@ -87,14 +86,14 @@
 
 </table>
 
- <script type="text/javascript">
-     function changeButtonText(id) 
-     {
-            var button = document.getElementById('btn-' + id);
-            button.innerText = 'Tilmeldt';
-            alert('Du er nu tilmeldt dette event!');
-            button.style.pointerEvents = 'none'; // Disable click event
-            button.style.color = 'gray'; // Change color to indicate disabled state
-            button.style.textDecoration = 'white'; // Remove underline
-     }
- </script>
+   {
+<script type="text/javascript">
+    function changeButtonText(id) {
+        var button = document.getElementById('btn-' + id);
+        button.innerText = 'Tilmeldt';
+        alert('Du er nu tilmeldt dette event!');
+        button.style.pointerEvents = 'none'; // Disable click event
+        button.style.color = 'gray'; // Change color to indicate disabled state
+        button.style.textDecoration = 'none'; // Remove underline
+    }
+</script>
