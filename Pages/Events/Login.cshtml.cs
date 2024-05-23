@@ -11,12 +11,9 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
     public class LoginModel : PageModel
     {
         [BindProperty]
-        public string Name { get; set; }
+       public Administrator Administrator { get; set; }
 
-        [BindProperty]
-        public string Password { get; set; }
-
-        */public string Message { get; set; }
+        public string Message { get; set; }
 
         private List<Administrator> LoadUsers()
         {
