@@ -6,12 +6,6 @@
 
         public string Password { get; set; }
 
-       // public string Position { get; set; }
-
-
-
-
-        // MISSING ERROR MESSAGES
 
 
 
