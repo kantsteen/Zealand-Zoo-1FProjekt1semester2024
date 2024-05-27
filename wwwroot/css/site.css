@@ -27,5 +27,21 @@ h1 {
 }
 
 tbody {
-    color: deeppink;
+    color: white;
+    font-size: large;
+    margin: auto;
+    width: 50%;
+    border: 2px solid deeppink;
+}
+
+th {
+   color: white;
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: white;
 }

@@ -23,25 +23,19 @@
                 Id
             </th>
             <th>
-                Name
+                Navn
             </th>
             <th>
-                Description
+                Beskrivelse
             </th>
             <th>
-                Limit
+                Antalsbegrænsning
             </th>
             <th>
-                OpeningTime
+                Åbningstid
             </th>
             <th>
-                ClosingTime
-            </th>
-            <th>
-                ImageName
-            </th>
-            <th>
-                Action
+                Lukketid
             </th>
         </tr>
     </thead>
@@ -60,7 +54,6 @@
                 </td>
                 <td>
                     @item.Value.Limit
-
                 </td>
                 <td>
                     @item.Value.OpeningTime
@@ -69,12 +62,8 @@
                     @item.Value.ClosingTime
                 </td>
                 <td>
-                    @item.Value.ImageName
+                    <img src="~/Images/@item.Value.ImageName" width="220" height="140">
                 </td>
-                <td>
-                    <img src="~/Images/@item.Value.ImageName" width="60" height="70">
-                </td>
-
                 <td>
                     <p>
                         <a id="btn-@item.Key" href="#" onclick="changeButtonText(@item.Key); return false;">Tilmelding</a>
@@ -93,7 +82,7 @@
         button.innerText = 'Tilmeldt';
         alert('Du er nu tilmeldt dette event!');
         button.style.pointerEvents = 'none'; // Disable click event
-        button.style.color = 'gray'; // Change color to indicate disabled state
+        button.style.color = '#989898'; // Change color to indicate disabled state
         button.style.textDecoration = 'none'; // Remove underline
     }
 </script>

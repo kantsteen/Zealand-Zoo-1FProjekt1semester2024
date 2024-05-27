@@ -25,22 +25,19 @@
                 Id
             </th>
             <th>
-                Name
+                Navn
             </th>
             <th>
-                Description
+                Beskrivelse
             </th>
             <th>
-                Limit
+                Antalsbegrænsning
             </th>
             <th>
-                OpeningTime
+                Åbningstid
             </th>
             <th>
-                ClosingTime
-            </th>
-            <th>
-                ImageName
+                Lukketid
             </th>
         </tr>
     </thead>
@@ -66,11 +63,8 @@
                 <td>
                     @item.Value.ClosingTime
                 </td>
-                <td>
-                    @item.Value.ImageName
-                </td>
-                <td>
-                    <img src="~/Images/@item.Value.ImageName" width="60" height="70">
+                <td align="right">
+                    <img src="~/Images/@item.Value.ImageName" width="220" height="140">
                 </td>
                
                     <td>
