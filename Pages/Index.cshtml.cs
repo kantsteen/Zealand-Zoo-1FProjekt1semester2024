@@ -8,17 +8,21 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        public StudentJSON StudentJSON { get; set; }
-        public IEnumerable<Student>  Student { get; private set; }
-        public IndexModel(ILogger<IndexModel> logger,StudentJSON studentInfo )
+     
+        public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-            StudentJSON = studentInfo;
+            
         }
-
+        
         public void OnGet()
         {
-            Student = StudentJSON.GetStudent();
+           
         }
+       
+      
+
+     
+
     }
 }

@@ -14,7 +14,16 @@
         <input type="submit" value="Filter" />
     </p>
 </form>
-
+<div class="card-columns">
+    @foreach (var product in Model.Students)
+    {
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@product.Name</h5>
+            </div>
+        </div>
+    }
+</div>
 
 <table class="table">
     <thead>
@@ -85,6 +94,7 @@
     </tbody>
 
 </table>
+
 
    {
 <script type="text/javascript">
