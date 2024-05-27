@@ -4,25 +4,26 @@
     ViewData["Title"] = "ReadAllEvent";
 }
 
-<h1>ShowAllEvents</h1>
+<h2>Kommende Events</h2>
 
 
 
-<form>
-    <p>
-        Search: <input type="text" asp-for="FilterCriteria" />
-        <input type="submit" value="Filter" />
-    </p>
+<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+    <div class="input-group">
+        <input type="search" class="form-control form-control-dark text-bg-dark" asp-for="FilterCriteria" placeholder="Search..." aria-label="Search">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
 </form>
+
 <div class="card-columns">
-    @foreach (var product in Model.Students)
+    @* @foreach (var product in Model.Students)
     {
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">@product.Name</h5>
             </div>
         </div>
-    }
+    } *@
 </div>
 
 <table class="table">
@@ -32,25 +33,19 @@
                 Id
             </th>
             <th>
-                Name
+                Navn
             </th>
             <th>
-                Description
+                Beskrivelse
             </th>
             <th>
-                Limit
+                Antalsbegrænsning
             </th>
             <th>
-                OpeningTime
+                Åbningstid
             </th>
             <th>
-                ClosingTime
-            </th>
-            <th>
-                ImageName
-            </th>
-            <th>
-                Action
+                Lukketid
             </th>
         </tr>
     </thead>
@@ -78,12 +73,8 @@
                     @item.Value.ClosingTime
                 </td>
                 <td>
-                    @item.Value.ImageName
+                    <img src="~/Images/@item.Value.ImageName" width="220" height="140">
                 </td>
-                <td>
-                    <img src="~/Images/@item.Value.ImageName" width="60" height="70">
-                </td>
-
                 <td>
                     <p>
                         <a id="btn-@item.Key" href="#" onclick="changeButtonText(@item.Key); ">Tilmelding</a>
@@ -92,7 +83,6 @@
             </tr>
         }
     </tbody>
-
 </table>
 
 

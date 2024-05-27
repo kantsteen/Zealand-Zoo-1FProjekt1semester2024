@@ -4,7 +4,7 @@
     ViewData["Title"] = "ReadAllEvent";
 
 }
-<h1>ShowAllEvents</h1>
+<h2>Kommende Events [Admin]</h2>
 
 <p>
     <a asp-page="CreateEvent">Create New Event</a>
@@ -25,22 +25,19 @@
                 Id
             </th>
             <th>
-                Name
+                Navn
             </th>
             <th>
-                Description
+                Beskrivelse
             </th>
             <th>
-                Limit
+                Antalsbegrænsning
             </th>
             <th>
-                OpeningTime
+                Åbningstid
             </th>
             <th>
-                ClosingTime
-            </th>
-            <th>
-                ImageName
+                Lukketid
             </th>
         </tr>
     </thead>
@@ -67,16 +64,13 @@
                     @item.Value.ClosingTime
                 </td>
                 <td>
-                    @item.Value.ImageName
-                </td>
-                <td>
-                    <img src="~/Images/@item.Value.ImageName" width="60" height="70">
+                    <img src="~/Images/@item.Value.ImageName" width="220" height="140">
                 </td>
                
                     <td>
                         <p>
-                        <a asp-page="UpdateEvent" asp-route-id="@item.Key">Edit</a> |
-                        <a asp-page="DeleteEvent" asp-route-id="@item.Key">Delete</a>
+                        <a asp-page="UpdateEvent" asp-route-id="@item.Key">Rediger</a> |
+                        <a asp-page="DeleteEvent" asp-route-id="@item.Key">Slet</a>
                     </p>
                 </td>
                 
