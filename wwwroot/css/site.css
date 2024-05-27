@@ -18,5 +18,11 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #1a1a1a;
 }
+
+display-1 {
+    color: deeppink;
+}
+
