@@ -1,6 +1,9 @@
 html {
     font-size: 14px;
+    height: 100%;
 }
+
+
 
 @media (min-width: 768px) {
     html {
@@ -12,49 +15,46 @@ html {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-    position: relative;
-    min-height: 100%;
-}
 
-body {
-    margin-bottom: 60px;
+
+body { /*baggrund på alle sider*/
+    margin-bottom: 0px;
     background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-h1 {
+main {
+    flex: 1;
+}
+
+h1 { /*Zealand Zoo forside*/
     color: deeppink;
 }
 
-h2 {
+h2 { /*Kommende events*/
     color: deeppink;
     margin-left: 10px;
     margin-bottom: 20px;
     font-size: 50px;
 }
 
-tbody {
+tbody { /*tekst i kommende events bokse*/
     color: white;
-    font-size: large;
+    font-size: 18px;
     margin: auto;
     width: 50%;
     border: 2px solid deeppink;
 }
 
-th {
-    color: white;
+th { /*Id, navn, beksrivelse, antalsbegrænsning åbne- og lukketider*/
+    color: deeppink;
 }
 
-form {
-    color: white;
+form { /*search*/
+    color: deeppink;
     margin-left: 10px;
 }
 
-a {
-    color: white;
-}
 
-.center {
-    padding: 70px 0;
-    border: 3px solid green;
-}
