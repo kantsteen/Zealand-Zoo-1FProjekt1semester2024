@@ -22,7 +22,10 @@ body {
     background-color: #1a1a1a;
 }
 
-display-1 {
+h1 {
     color: deeppink;
 }
 
+tbody {
+    color: deeppink;
+}
