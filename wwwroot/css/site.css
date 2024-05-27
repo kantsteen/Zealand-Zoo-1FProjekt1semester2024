@@ -1,4 +1,4 @@
-html {
+/*html {
     font-size: 14px;
     height: 100%;
 }
@@ -17,8 +17,8 @@ html {
 
 
 
-body { /*baggrund på alle sider*/
-    margin-bottom: 0px;
+body {*/ /*baggrund på alle sider*/
+    /*margin-bottom: 0px;
     background-color: #1a1a1a;
     display: flex;
     flex-direction: column;
@@ -29,32 +29,96 @@ main {
     flex: 1;
 }
 
-h1 { /*Zealand Zoo forside*/
-    color: deeppink;
+h1 {*/ /*Zealand Zoo forside*/
+    /*color: deeppink;
 }
 
-h2 { /*Kommende events*/
-    color: deeppink;
+h2 {*/ /*Kommende events*/
+    /*color: deeppink;
     margin-left: 10px;
     margin-bottom: 20px;
     font-size: 50px;
 }
 
-tbody { /*tekst i kommende events bokse*/
-    color: white;
+tbody {*/ /*tekst i kommende events bokse*/
+    /*color: white;
     font-size: 18px;
     margin: auto;
     width: 50%;
     border: 2px solid deeppink;
 }
 
-th { /*Id, navn, beksrivelse, antalsbegrænsning åbne- og lukketider*/
-    color: deeppink;
+th {*/ /*Id, navn, beksrivelse, antalsbegrænsning åbne- og lukketider*/
+    /*color: deeppink;
 }
 
-form { /*search*/
-    color: deeppink;
+form {*/ /*search*/
+    /*color: deeppink;
     margin-left: 10px;
+}*/
+
+
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
 
+header, footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Navigation bar styles */
+.navbar-brand {
+    white-space: revert;
+    text-align: center;
+    word-break: break-all;
+}
+
+.nav-link {
+    color: #a0a0a0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        background-color: deeppink;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -3px;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .nav-link:hover {
+        color: white;
+    }

@@ -5,7 +5,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 
 
-.btn-primary {
+/*.btn-primary {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
@@ -59,7 +59,73 @@ img {
     padding: 0 10px;
     position: relative;
     text-decoration: none;
-    transition: color 0.3s ease-in-out; /* Smooth color transition */
+    transition: color 0.3s ease-in-out;*/ /* Smooth color transition */
+/*}
+
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        background-color: deeppink;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -3px;*/ /* Slightly above the bottom for visibility */
+        /*transition: width 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .nav-link:hover {
+        color: white;*/ /* Change text color on hover */
+    /*}*/
+
+/* General styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Navigation bar styles */
+.navbar-brand {
+    white-space: revert;
+    text-align: center;
+    word-break: break-all;
+}
+
+.nav-link {
+    color: #a0a0a0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
     .nav-link::after {
@@ -69,7 +135,7 @@ img {
         height: 3px;
         width: 0;
         left: 0;
-        bottom: -3px; /* Slightly above the bottom for visibility */
+        bottom: -3px;
         transition: width 0.3s ease-in-out;
     }
 
@@ -78,5 +144,5 @@ img {
     }
 
     .nav-link:hover {
-        color: white; /* Change text color on hover */
+        color: white;
     }
