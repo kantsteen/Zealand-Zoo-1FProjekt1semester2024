@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Zealand_Zoo_1FProjekt1semester2024.Models;
 using Zealand_Zoo_1FProjekt1semester2024.Services;
 
-namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Students
+namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
     public class CreateStudentModel : PageModel
     {
@@ -13,16 +13,19 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Students
         [BindProperty]
         public IEnumerable<Student> Student { get; set; }
 
-        public CreateStudentModel(ILogger<CreateStudentModel> logger, StudentJSON studentJSON) {
+        public CreateStudentModel(ILogger<CreateStudentModel> logger, StudentJSON studentJSON)
+        {
             _logger = logger;
             _studentJSON = studentJSON;
         }
 
-        public IActionResult OnGet() {
+        public IActionResult OnGet()
+        {
             return Page();
         }
 
-        public IActionResult OnPost() {
+        public IActionResult OnPost()
+        {
             if (!ModelState.IsValid)
             {
                 return Page();

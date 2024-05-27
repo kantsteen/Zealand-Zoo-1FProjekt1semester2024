@@ -6,40 +6,44 @@ using Zealand_Zoo_1FProjekt1semester2024.Services;
 
 namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
-    public class ReadAllEventModelStudents : PageModel
+    public class ReadAllEventModelStudents : BasePageStudentModel
     {
         private IEventRepository catalog;
         public StudentJSON _studentJSON;
 
-        public IEnumerable<Student> Students { get; private set; }
+        public IEnumerable<Student> Students { get; set; }
 
         public ReadAllEventModelStudents(IEventRepository evt, StudentJSON studentJSON)
         {
             catalog = evt;
             _studentJSON = studentJSON;
+            
 
 
         }
-        public Dictionary<int, Event> Events { get; private set; }
+        public Dictionary<int, Event> Events { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
-      
+
 
         public IActionResult OnGet()
         {
-            
-                Students = _studentJSON.GetStudent();
-            
+           Students = _studentJSON.GetStudent();
+
+            CheckLogin(); // Ensure the user is authenticated   
+
             Events = catalog.AllEvents();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
                 Events = catalog.FilterEvent(FilterCriteria);
+
             }
 
             return Page();
         }
 
-        
+
+
     }
 }

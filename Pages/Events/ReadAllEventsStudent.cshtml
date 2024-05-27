@@ -1,5 +1,5 @@
 ﻿@page
-@model Zealand_Zoo_1FProjekt1semester2024.Pages.Events.ReadAllEventModelStudents
+@model ReadAllEventModelStudents
 @{
     ViewData["Title"] = "ReadAllEvent";
 }
@@ -14,16 +14,17 @@
         <input type="submit" value="Filter" />
     </p>
 </form>
-<div class="card-columns">
-    @foreach (var product in Model.Students)
+<div class="table">
+    @foreach (var student in Model.Students)
     {
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">@product.Name</h5>
+                <h5 class="card-title">@student.Name</h5>
             </div>
         </div>
     }
 </div>
+
 
 <table class="table">
     <thead>
