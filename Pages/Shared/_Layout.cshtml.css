@@ -46,37 +46,6 @@ img {
     padding: 0px;
 }
 
-.navbar-brand {
-    white-space: revert;
-    text-align: center;
-    word-break: break-all;
+img {
+    position: absolute
 }
-
-.nav-link {
-    color: #a0a0a0;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    padding: 0 10px;
-    position: relative;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out; /* Smooth color transition */
-}
-
-    .nav-link::after {
-        content: "";
-        position: absolute;
-        background-color: deeppink;
-        height: 3px;
-        width: 0;
-        left: 0;
-        bottom: -3px; /* Slightly above the bottom for visibility */
-        transition: width 0.3s ease-in-out;
-    }
-
-    .nav-link:hover::after {
-        width: 100%;
-    }
-
-    .nav-link:hover {
-        color: white; /* Change text color on hover */
-    }
