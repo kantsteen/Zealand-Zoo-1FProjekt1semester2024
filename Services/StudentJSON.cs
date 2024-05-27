@@ -27,6 +27,16 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
                     });
             }
         }
+
+        public void SaveStudents(IEnumerable<Student> students) {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string jsonString = JsonSerializer.Serialize(students, options);
+
+            using (var jsonFileWriter = new StreamWriter(JsonFileName))
+            {
+                jsonFileWriter.Write(jsonString);
+            }
+        }
     }
 }
 

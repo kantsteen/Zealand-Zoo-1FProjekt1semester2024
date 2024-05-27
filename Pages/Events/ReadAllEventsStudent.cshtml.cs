@@ -2,17 +2,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Zealand_Zoo_1FProjekt1semester2024.Interface;
 using Zealand_Zoo_1FProjekt1semester2024.Models;
+using Zealand_Zoo_1FProjekt1semester2024.Services;
 
 namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
     public class ReadAllEventModelStudents : PageModel
     {
         private IEventRepository catalog;
-       
-        public ReadAllEventModelStudents(IEventRepository evt)
+        public StudentJSON _studentJSON;
+
+        public IEnumerable<Student> Students { get; private set; }
+
+        public ReadAllEventModelStudents(IEventRepository evt, StudentJSON studentJSON)
         {
             catalog = evt;
-        
+            _studentJSON = studentJSON;
+
 
         }
         public Dictionary<int, Event> Events { get; private set; }
@@ -23,6 +28,9 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 
         public IActionResult OnGet()
         {
+            
+                Students = _studentJSON.GetStudent();
+            
             Events = catalog.AllEvents();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
@@ -31,5 +39,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 
             return Page();
         }
+
+        
     }
 }
