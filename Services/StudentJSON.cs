@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using Zealand_Zoo_1FProjekt1semester2024.Helpers;
 using Zealand_Zoo_1FProjekt1semester2024.Models;
-
+using System.Linq;
 namespace Zealand_Zoo_1FProjekt1semester2024.Services
 {
     public class StudentJSON
@@ -36,13 +36,13 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
             using (var jsonFileReader = File.OpenText(JsonFileNames))
             {
                 return JsonSerializer.Deserialize<Student[]>(jsonFileReader.ReadToEnd(),
+               
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
                     });
             }
         }
-
         public void SaveStudents(IEnumerable<Student> students) {
             var options = new JsonSerializerOptions { WriteIndented = true };
             string jsonString = JsonSerializer.Serialize(students, options);
