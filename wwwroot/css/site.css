@@ -40,13 +40,14 @@ h2 { /*Kommende events*/
     font-size: 50px;
 }
 
-tbody { /*tekst i kommende events bokse*/
+tbody { /*tekst i "kommende events" bokse*/
     color: white;
     font-size: 18px;
     margin: auto;
     width: 50%;
-    border: 2px solid deeppink;
+    border: 1px solid deeppink;
 }
+
 
 th { /*Id, navn, beksrivelse, antalsbegrænsning åbne- og lukketider*/
     color: deeppink;
@@ -133,7 +134,17 @@ width: 100%;
     background-image: url('../images/black-flamingo.jpg');
 }*/
 
+.filter-shadow-middle { /*forside flamingo centered*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
+.filter-shadow-middle:hover { /*forside flamingo dropshadow*/
+    filter: drop-shadow(0 0 0.75rem deeppink);
+    animation: ease-in-out 1s;
+}
 
 
 
