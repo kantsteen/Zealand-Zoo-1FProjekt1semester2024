@@ -10,11 +10,11 @@
     <a asp-page="CreateEvent">Create New Event</a>
 </p>
 
-<form>
-    <p>
-        Search: <input type="text" asp-for="FilterCriteria" />
-        <input type="submit" value="Filter" />
-    </p>
+<form class="mb-3 mb-lg-0 me-lg-3" role="search">
+    <div class="input-group" style="max-width: 300px; margin: left;">
+        <input type="search" class="form-control form-control-dark text-bg-dark" asp-for="FilterCriteria" placeholder="Search..." aria-label="Search">
+        <button type="submit" class="btn" style="background-color: deeppink; color: white;">Search</button>
+    </div>
 </form>
 
 

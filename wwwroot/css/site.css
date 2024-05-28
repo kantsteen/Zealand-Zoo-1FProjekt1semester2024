@@ -124,3 +124,31 @@ width: 100%;
 .nav-link:hover {
     color: white;
 }
+
+.filter-shadow:hover {
+    filter: drop-shadow(0 0 0.75rem deeppink);
+}
+
+/*#body-homepage {
+    background-image: url('../images/black-flamingo.jpg');
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
