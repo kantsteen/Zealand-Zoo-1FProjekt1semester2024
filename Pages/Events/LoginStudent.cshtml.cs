@@ -16,6 +16,8 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 
         public string Message { get; set; }
 
+        public bool StudentExists { get; set; } = true; // Assume student exists unless proven otherwise
+
         private List<Student> LoadStudent()
         {
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "Students.json");
@@ -32,14 +34,23 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
         public void OnGet()
         {
         }
-        public IActionResult OnPost() {
+        public IActionResult OnPost()
+        {
             if (ModelState.IsValid)
             {
                 var students = LoadStudent();
-                students.Add(Student);
-                SaveStudents(students);
-                HttpContext.Session.SetString("Name", Student.Name);
-                return RedirectToPage("ReadAllEventsStudent");
+                var existingStudent = students.FirstOrDefault(s => s.Id == Student.Id && s.Name == Student.Name);
+                if (existingStudent != null)
+                {
+                    // Student exists, log in
+                    HttpContext.Session.SetString("Name", Student.Name);
+                    return RedirectToPage("ReadAllEventsStudent");  // Redirect to the main page after login
+                }
+                else
+                {
+                    Message = "No such student found. Please create a new account.";
+                    return Page(); // Stay on the login page and show the message
+                }
             }
             else
             {
@@ -48,11 +59,5 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
             }
         }
 
-        private void SaveStudents(List<Student> students) {
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            var jsonData = JsonSerializer.Serialize(students, options);
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "Students.json");
-            System.IO.File.WriteAllText(filePath, jsonData);
-        }
     }
 }
