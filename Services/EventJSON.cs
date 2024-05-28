@@ -30,7 +30,15 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
         public void AddEvent(Event newEvent)
         {
             Dictionary<int, Event> events = AllEvents();
-            events.Add(newEvent.Id, newEvent);
+            try
+            {
+                events.Add(newEvent.Id, newEvent);
+            }
+            catch (Exception ex) 
+            {
+                throw;
+            
+            }
             JSONFileWriter.WriteToJson(events, JsonFileName);
         }
 
