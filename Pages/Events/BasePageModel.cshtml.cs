@@ -6,13 +6,13 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
 {
     public class BasePageModelModel : PageModel
     {
-        public string Name => HttpContext.Session.GetString("Name");
+        // This property checks if an admin name is present in the session
+        public bool IsAdminAuthenticated => !string.IsNullOrEmpty(HttpContext.Session.GetString("AdminName"));
 
-        public bool IsAuthenticated => !string.IsNullOrEmpty(Name);
-
-        public void CheckLogin()
+        public void CheckAdminLogin()
         {
-            if (!IsAuthenticated)
+            // Redirect to login if not an admin
+            if (!IsAdminAuthenticated)
             {
                 Response.Redirect("/Events/Login");
             }
