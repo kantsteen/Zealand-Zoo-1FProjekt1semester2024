@@ -93,6 +93,7 @@ main {
     white-space: revert;
     text-align: center;
     word-break: break-all;
+    color: white;
 }
 
 .nav-link {
