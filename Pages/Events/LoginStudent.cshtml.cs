@@ -49,7 +49,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
                 else
                 {
                     Message = "No such student found. Please create a new account.";
-                    return Page(); // Stay on the login page to show the message
+                    return Page(); // Stay on the login page and show the message
                 }
             }
             else
