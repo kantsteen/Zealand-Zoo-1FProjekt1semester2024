@@ -27,10 +27,10 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
         public IActionResult OnPost()
         {
             var users = LoadUsers();
-            var user = users.Find(u => u.Name == Administrator.Name && u.Password == Administrator.Password);
+            var user = users.Find(u => u.AdminName == Administrator.AdminName && u.Password == Administrator.Password);
             if (user != null)
             {
-                HttpContext.Session.SetString("Name", user.Name);
+                HttpContext.Session.SetString("AdminName", user.AdminName);
                 return RedirectToPage("ReadAllEvent");
             }
             else
