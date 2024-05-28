@@ -1,12 +1,21 @@
 ﻿using System.Text.Json;
 using Zealand_Zoo_1FProjekt1semester2024.Helpers;
 using Zealand_Zoo_1FProjekt1semester2024.Models;
-
+using System.Linq;
 namespace Zealand_Zoo_1FProjekt1semester2024.Services
 {
     public class StudentJSON
     {
+        public Student GetStudentById(string studentId)
+        {
+            if (!int.TryParse(studentId, out int id))
+            {
+                return null; // Returns null if studentId is not a valid integer
+            }
 
+            var allStudents = AllStudent(); // Ensure this method correctly parses the JSON into a List<Student>
+            return allStudents.FirstOrDefault(s => s.Id == id);
+        }
         public StudentJSON(IWebHostEnvironment webHostEnvironment) {
             WebHostEnvironment = webHostEnvironment;
         }
@@ -36,13 +45,13 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Services
             using (var jsonFileReader = File.OpenText(JsonFileNames))
             {
                 return JsonSerializer.Deserialize<Student[]>(jsonFileReader.ReadToEnd(),
+               
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
                     });
             }
         }
-
         public void SaveStudents(IEnumerable<Student> students) {
             var options = new JsonSerializerOptions { WriteIndented = true };
             string jsonString = JsonSerializer.Serialize(students, options);
