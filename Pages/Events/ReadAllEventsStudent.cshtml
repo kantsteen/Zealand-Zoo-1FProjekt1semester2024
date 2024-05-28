@@ -1,14 +1,12 @@
 ﻿@page
-@model Zealand_Zoo_1FProjekt1semester2024.Pages.Events.ReadEventModel
+@model ReadAllEventModelStudents
 @{
     ViewData["Title"] = "ReadAllEvent";
-
 }
+
 <h1>ShowAllEvents</h1>
 
-<p>
-    <a asp-page="CreateEvent">Create New Event</a>
-</p>
+
 
 <form>
     <p>
@@ -16,6 +14,25 @@
         <input type="submit" value="Filter" />
     </p>
 </form>
+<div class="table">
+    @if (Model.Students.Any()) // Checks if there are any students in the collection
+    {
+        foreach (var student in Model.Students) // Iterates over each student in the collection
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@student.Name</h5>
+                </div>
+            </div>
+        }
+    }
+    else // Executes if there are no students in the collection
+    {
+        <p>No student information available.</p>
+        // Displays a message indicating no data
+    }
+</div>
+
 
 
 <table class="table">
@@ -42,6 +59,9 @@
             <th>
                 ImageName
             </th>
+            <th>
+                Action
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -59,6 +79,7 @@
                 </td>
                 <td>
                     @item.Value.Limit
+
                 </td>
                 <td>
                     @item.Value.OpeningTime
@@ -72,16 +93,28 @@
                 <td>
                     <img src="~/Images/@item.Value.ImageName" width="60" height="70">
                 </td>
-               
-                    <td>
-                        <p>
-                        <a asp-page="UpdateEvent" asp-route-id="@item.Key">Edit</a> |
-                        <a asp-page="DeleteEvent" asp-route-id="@item.Key">Delete</a>
+
+                <td>
+                    <p>
+                        <a id="btn-@item.Key" href="#" onclick="changeButtonText(@item.Key); ">Tilmelding</a>
                     </p>
                 </td>
-                
             </tr>
         }
     </tbody>
 
 </table>
+
+
+   
+<script type="text/javascript">
+    function changeButtonText(id) 
+    {
+        var button = document.getElementById('btn-' + id);
+        button.innerText = 'Tilmeldt';
+        alert('Du er nu tilmeldt dette event!');
+        button.style.pointerEvents = 'none'; // Disable click event
+        button.style.color = 'gray'; // Change color to indicate disabled state
+        button.style.textDecoration = 'none'; // Remove underline
+    }
+</script>

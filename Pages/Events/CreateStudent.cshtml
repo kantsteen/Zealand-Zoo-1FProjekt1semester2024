@@ -1,0 +1,30 @@
+﻿@page
+@model Zealand_Zoo_1FProjekt1semester2024.Pages.Events.CreateStudentModel
+
+<h2>Create New Student</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Student.Name">Name:</label>
+        <input asp-for="Student.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Student.Id">Student ID:</label>
+        <input asp-for="Student.Id" class="form-control" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create Account</button>
+    </div>
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <div class="alert alert-danger">@Model.Message</div>
+    }
+
+    @if (TempData["SuccessMessage"] != null && Model.Student != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+
+    }
+</form>
+
+

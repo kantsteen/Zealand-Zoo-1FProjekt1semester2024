@@ -1,0 +1,30 @@
+﻿@page
+@model Zealand_Zoo_1FProjekt1semester2024.Pages.Events.LoginStudentModel
+@{
+    ViewData["Title"] = "Login";
+}
+<h2>Login</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Student.Name">Name:</label>
+        <input asp-for="Student.Name" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Student.Id">Student ID:</label>
+        <input asp-for="Student.Id" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-warning">@Model.Message</div>
+    @if (Model.Message.Contains("Please create a new account"))
+    {
+        <a class="btn btn-link" asp-page="/Events/CreateStudent">Create New Account</a>
+    }
+}
+
