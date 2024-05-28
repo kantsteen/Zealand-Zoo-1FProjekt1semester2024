@@ -11,6 +11,8 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
         [BindProperty]
         public Event Event { get; set; }
 
+        public string ErrorMsg { get; private set; } = "";
+
         public CreateEventModel(IEventRepository evt)
         {
             catalog = evt;
@@ -27,7 +29,18 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
                 return Page();
             }
 
-            catalog.AddEvent(Event);
+            try 
+            {
+                catalog.AddEvent(Event);
+            }
+            catch (ArgumentException ex)
+            { 
+                ErrorMsg = ex.Message;
+                return Page();
+
+            }
+
+            
 
             return RedirectToPage("ReadAllEvent");
         }
