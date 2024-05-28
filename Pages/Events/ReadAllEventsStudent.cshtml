@@ -4,15 +4,15 @@
     ViewData["Title"] = "ReadAllEvent";
 }
 
-<h1>ShowAllEvents</h1>
+<h2>Kommende Events</h2>
 
 
 
-<form>
-    <p>
-        Search: <input type="text" asp-for="FilterCriteria" />
-        <input type="submit" value="Filter" />
-    </p>
+<form class="mb-3 mb-lg-0 me-lg-3" role="search">
+    <div class="input-group" style="max-width: 300px; margin: left;">
+        <input type="search" class="form-control form-control-dark text-bg-dark" asp-for="FilterCriteria" placeholder="Search..." aria-label="Search">
+         <button type="submit" class="btn" style="background-color: deeppink; color: white;">Search</button>
+    </div>
 </form>
 <div class="table">
     @if (Model.Students.Any()) // Checks if there are any students in the collection
@@ -42,25 +42,19 @@
                 Id
             </th>
             <th>
-                Name
+                Navn
             </th>
             <th>
-                Description
+                Beskrivelse
             </th>
             <th>
-                Limit
+                Antalsbegrænsning
             </th>
             <th>
-                OpeningTime
+                Åbningstid
             </th>
             <th>
-                ClosingTime
-            </th>
-            <th>
-                ImageName
-            </th>
-            <th>
-                Action
+                Lukketid
             </th>
         </tr>
     </thead>
@@ -88,12 +82,8 @@
                     @item.Value.ClosingTime
                 </td>
                 <td>
-                    @item.Value.ImageName
+                    <img src="~/Images/@item.Value.ImageName" width="220" height="140">
                 </td>
-                <td>
-                    <img src="~/Images/@item.Value.ImageName" width="60" height="70">
-                </td>
-
                 <td>
                     <p>
                         <a id="btn-@item.Key" href="#" onclick="changeButtonText(@item.Key); ">Tilmelding</a>
@@ -102,7 +92,6 @@
             </tr>
         }
     </tbody>
-
 </table>
 
 

@@ -1,22 +1,154 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    height: 100%;
 }
 
+
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+
+
+body { /*baggrund på alle sider*/
+    margin-bottom: 0px;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+h1 { /*Zealand Zoo forside*/
+    color: deeppink;
+}
+
+h2 { /*Kommende events*/
+    color: deeppink;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+tbody { /*tekst i kommende events bokse*/
+    color: white;
+    font-size: 18px;
+    margin: auto;
+    width: 50%;
+    border: 2px solid deeppink;
+}
+
+th { /*Id, navn, beksrivelse, antalsbegrænsning åbne- og lukketider*/
+    color: deeppink;
+}
+
+form { /*search*/
+    color: deeppink;
+    margin-left: 10px;
+}
+
+
+/* General styles */
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
 body {
-  margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
 }
+
+header, footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+.footer {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Navigation bar styles */
+.navbar-brand {
+    white-space: revert;
+    text-align: center;
+    word-break: break-all;
+    color: white;
+}
+
+.nav-link {
+    color: #a0a0a0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: deeppink;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+width: 100%;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.filter-shadow:hover {
+    filter: drop-shadow(0 0 0.75rem deeppink);
+}
+
+/*#body-homepage {
+    background-image: url('../images/black-flamingo.jpg');
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
