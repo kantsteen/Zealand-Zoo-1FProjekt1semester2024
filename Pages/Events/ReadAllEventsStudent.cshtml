@@ -1,5 +1,5 @@
 ﻿@page
-@model Zealand_Zoo_1FProjekt1semester2024.Pages.Events.ReadAllEventModelStudents
+@model ReadAllEventModelStudents
 @{
     ViewData["Title"] = "ReadAllEvent";
 }
@@ -14,18 +14,26 @@
          <button type="submit" class="btn" style="background-color: deeppink; color: white;">Search</button>
     </div>
 </form>
-
-
-<div class="card-columns">
-    @* @foreach (var product in Model.Students)
+<div class="table">
+    @if (Model.Students.Any()) // Checks if there are any students in the collection
     {
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">@product.Name</h5>
+        foreach (var student in Model.Students) // Iterates over each student in the collection
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@student.Name</h5>
+                </div>
             </div>
-        </div>
-    } *@
+        }
+    }
+    else // Executes if there are no students in the collection
+    {
+        <p>No student information available.</p>
+        // Displays a message indicating no data
+    }
 </div>
+
+
 
 <table class="table">
     <thead>
@@ -87,9 +95,10 @@
 </table>
 
 
-   {
+   
 <script type="text/javascript">
-    function changeButtonText(id) {
+    function changeButtonText(id) 
+    {
         var button = document.getElementById('btn-' + id);
         button.innerText = 'Tilmeldt';
         alert('Du er nu tilmeldt dette event!');

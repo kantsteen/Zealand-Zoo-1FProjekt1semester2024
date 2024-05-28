@@ -17,6 +17,10 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Helpers
             string jsonString = File.ReadAllText(JsonFileName);
             return JsonConvert.DeserializeObject<Dictionary<int, Event>>(jsonString);
         }
+        public static List<Student> ReadJson1(string JsonFileName) {
+            string jsonString = File.ReadAllText(JsonFileName);
+            return JsonConvert.DeserializeObject<List<Student>>(jsonString);
+        }
     }
 
     

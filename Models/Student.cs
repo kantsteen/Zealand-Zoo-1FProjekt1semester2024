@@ -9,8 +9,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Models
         public int Id { get; set; }
 
 
-
-        public override string ToString() => JsonSerializer.Serialize<Student>(this);
+        //public override string ToString() => JsonSerializer.Serialize<Student>(this);
 
 
     }
