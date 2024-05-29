@@ -21,7 +21,7 @@ namespace Zealand_Zoo_1FProjekt1semester2024.Pages.Events
         
         public IActionResult OnGet()
         {
-            CheckLogin(); // Ensure the user is authenticated
+            CheckAdminLogin(); // Ensure the user is authenticated
             Events = catalog.AllEvents();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
